@@ -1,0 +1,132 @@
+/* Watchlist header */
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.watchlist-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.watchlist-filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Watchlist table */
+.watchlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.watchlist-table th {
+    text-align: left;
+    padding: 1rem;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.watchlist-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.watchlist-table tr:last-child td {
+    border-bottom: none;
+}
+
+.watchlist-table tr:hover {
+    background-color: var(--secondary-color);
+}
+
+.watchlist-table .company-name {
+    font-weight: 500;
+}
+
+.watchlist-table .company-ticker {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.watchlist-table .price-change.positive {
+    color: var(--success-color);
+}
+
+.watchlist-table .price-change.negative {
+    color: var(--danger-color);
+}
+
+.watchlist-table .actions {
+    text-align: center;
+}
+
+.watchlist-table .btn-icon {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.watchlist-table .btn-icon:hover {
+    color: var(--danger-color);
+}
+
+/* Empty watchlist */
+.watchlist-empty {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 3rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.watchlist-empty-icon {
+    font-size: 3rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.watchlist-empty-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.watchlist-empty-text {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .watchlist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .watchlist-filters {
+        width: 100%;
+    }
+    
+    .watchlist-filters input,
+    .watchlist-filters select {
+        flex: 1;
+    }
+    
+    .watchlist-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

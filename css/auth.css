@@ -1,0 +1,162 @@
+/* Auth container */
+.auth-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header img {
+    height: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.auth-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.auth-form .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.auth-form .form-control {
+    padding-left: 2.5rem;
+}
+
+.auth-form .icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 2.25rem;
+    color: var(--text-muted);
+}
+
+.auth-form .toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 2.25rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.remember-me input {
+    margin-right: 0.5rem;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.social-login {
+    margin-top: 2rem;
+}
+
+.social-login-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.social-login-title span {
+    position: relative;
+    z-index: 1;
+    padding: 0 0.75rem;
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.social-login-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-button.google {
+    color: #DB4437;
+}
+
+.social-button.facebook {
+    color: #4267B2;
+}
+
+.social-button.twitter {
+    color: #1DA1F2;
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.form-check {
+    margin-bottom: 1.5rem;
+}
+
+.form-check-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.form-check-label a {
+    color: var(--primary-color);
+}

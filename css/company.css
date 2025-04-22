@@ -1,0 +1,290 @@
+/* Company header */
+.company-header {
+    background-color: var(--secondary-color);
+    padding: 2rem 0;
+}
+
+.company-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-meta {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-meta span {
+    margin-right: 1rem;
+}
+
+.company-price-container {
+    text-align: right;
+}
+
+.company-price {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.company-price-change {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.875rem;
+}
+
+.company-price-change.positive {
+    color: var(--success-color);
+}
+
+.company-price-change.negative {
+    color: var(--danger-color);
+}
+
+.company-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Company tabs */
+.company-tabs {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.company-tabs-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.company-tab {
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.company-tab:hover {
+    color: var(--text-color);
+}
+
+.company-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Company content */
+.company-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.company-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.company-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.company-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.company-metric {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+}
+
+.company-metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.company-metric-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Financial charts */
+.financial-chart {
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+.financial-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.financial-chart-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.financial-chart-period {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.financial-chart-period-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.financial-chart-period-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Financial tables */
+.financial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.financial-table th {
+    text-align: right;
+    padding: 0.75rem;
+    font-weight: 500;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.financial-table th:first-child {
+    text-align: left;
+}
+
+.financial-table td {
+    text-align: right;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.financial-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.financial-table tr:hover {
+    background-color: var(--secondary-color);
+}
+
+.financial-table .positive {
+    color: var(--success-color);
+}
+
+.financial-table .negative {
+    color: var(--danger-color);
+}
+
+/* Price range */
+.price-range {
+    margin: 2rem 0;
+}
+
+.price-range-bar {
+    height: 4px;
+    background-color: var(--border-color);
+    position: relative;
+    margin: 1rem 0;
+    border-radius: var(--radius-full);
+}
+
+.price-range-progress {
+    position: absolute;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.price-range-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.price-range-current {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.price-range-current-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.price-range-current-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .company-header-content {
+        flex-direction: column;
+    }
+    
+    .company-price-container {
+        text-align: left;
+        margin-top: 1rem;
+    }
+    
+    .company-price-change {
+        justify-content: flex-start;
+    }
+    
+    .company-tabs-container {
+        overflow-x: auto;
+    }
+}

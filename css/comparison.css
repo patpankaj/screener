@@ -1,0 +1,177 @@
+/* Comparison container */
+.comparison-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.comparison-header {
+    margin-bottom: 2rem;
+}
+
+.comparison-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.comparison-description {
+    color: var(--text-muted);
+}
+
+/* Company selection */
+.company-selection {
+    margin-bottom: 2rem;
+}
+
+.company-selection-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.company-selection-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-selection-item {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.company-selection-remove {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.company-selection-remove:hover {
+    color: var(--danger-color);
+}
+
+.company-selection-add {
+    margin-top: 1rem;
+}
+
+/* Metrics selection */
+.metrics-selection {
+    margin-bottom: 2rem;
+}
+
+.metrics-selection-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.metrics-selection-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.metrics-selection-item {
+    display: flex;
+    align-items: center;
+}
+
+.metrics-selection-item input {
+    margin-right: 0.5rem;
+}
+
+.metrics-selection-item label {
+    font-size: 0.875rem;
+}
+
+/* Comparison actions */
+.comparison-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Comparison results */
+.comparison-results {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th {
+    text-align: left;
+    padding: 0.75rem;
+    font-weight: 500;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.comparison-table th:not(:first-child) {
+    text-align: right;
+}
+
+.comparison-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table td:not(:first-child) {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.comparison-table tr:hover {
+    background-color: var(--secondary-color);
+}
+
+.comparison-table .metric-name {
+    font-weight: 500;
+}
+
+.comparison-table .better-value {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.comparison-table .worse-value {
+    color: var(--danger-color);
+}
+
+/* Comparison charts */
+.comparison-charts {
+    margin-top: 2rem;
+}
+
+.comparison-chart {
+    margin-bottom: 2rem;
+}
+
+.comparison-chart-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.comparison-chart-container {
+    height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .company-selection-items {
+        flex-direction: column;
+    }
+}

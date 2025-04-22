@@ -1,0 +1,212 @@
+/* Search box */
+.search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Search results */
+.search-header {
+    margin-bottom: 2rem;
+}
+
+.search-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-meta {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.search-result {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-result:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.search-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.search-result-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.search-result-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.search-result-meta span {
+    margin-right: 1rem;
+}
+
+.search-result-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.search-result-change {
+    font-size: 0.875rem;
+    text-align: right;
+}
+
+.search-result-change.positive {
+    color: var(--success-color);
+}
+
+.search-result-change.negative {
+    color: var(--danger-color);
+}
+
+.search-result-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.search-result-metric {
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.search-result-metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.search-result-metric-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Comparison bar */
+.comparison-bar {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.comparison-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.comparison-bar-title {
+    font-weight: 500;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.comparison-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-bottom: 0.5rem;
+}
+
+.comparison-item {
+    background-color: var(--secondary-color);
+    border-radius: var(--radius-full);
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+
+.comparison-item-remove {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.comparison-item-remove:hover {
+    color: var(--danger-color);
+}
+
+.comparison-bar-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comparison-bar-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .comparison-bar-title {
+        margin-bottom: 1rem;
+    }
+    
+    .comparison-items {
+        margin-bottom: 1rem;
+    }
+}
