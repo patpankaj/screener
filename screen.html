@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Screener - Screener</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/screener.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.svg" alt="Screener Logo">
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Screens</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Tools</a>
+                            <div class="dropdown-menu">
+                                <a href="screen.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-filter"></i></div>
+                                    <div class="content">
+                                        <h4>Create a stock screen</h4>
+                                        <p>Run queries on 10 years of financial data</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider">
+                                    <div class="premium-label">
+                                        <i class="fas fa-crown"></i> Premium features
+                                    </div>
+                                </div>
+                                <a href="commodities.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                                    <div class="content">
+                                        <h4>Commodity Prices</h4>
+                                        <p>See prices and trends of over 10,000 commodities</p>
+                                    </div>
+                                </a>
+                                <a href="shareholders.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-users"></i></div>
+                                    <div class="content">
+                                        <h4>Search shareholders</h4>
+                                        <p>See companies where a person holds over 1% of the shares</p>
+                                    </div>
+                                </a>
+                                <a href="announcements.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                                    <div class="content">
+                                        <h4>Latest Announcements</h4>
+                                        <p>Browse, filter and set alerts for announcements.</p>
+                                    </div>
+                                </a>
+                                <a href="premium.html" class="premium-link">Upgrade to premium</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <a href="login.html" class="btn btn-link login-btn">Login</a>
+                    <a href="register.html" class="btn btn-primary register-btn">Get free account</a>
+                    <div class="user-menu-container"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Stock Screener</h1>
+                <p class="page-description">Filter stocks based on financial metrics, ratios, and performance indicators.</p>
+            </div>
+        </section>
+
+        <section class="screener-section">
+            <div class="container">
+                <div class="screener-container">
+                    <div class="screener-sidebar">
+                        <div class="filter-section">
+                            <h3 class="filter-section-title">Screening Criteria</h3>
+                            <div id="screening-form">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="screener-actions">
+                            <button id="run-screen-btn" class="btn btn-primary">
+                                <i class="fas fa-play"></i> Run Screen
+                            </button>
+                            <button id="save-screen-btn" class="btn btn-outline">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                            <button id="clear-screen-btn" class="btn btn-link">
+                                <i class="fas fa-times"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                    <div class="screener-content">
+                        <div id="screening-results">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="Screener Logo">
+                    <p>Stock analysis and screening tool</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="premium.html">Premium</a></li>
+                            <li><a href="changelog.html">What's new?</a></li>
+                            <li><a href="learn.html">Learn</a></li>
+                            <li><a href="#">Install</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Team</h4>
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Theme</h4>
+                        <ul>
+                            <li><a href="#" class="theme-option" data-theme="light">Light</a></li>
+                            <li><a href="#" class="theme-option" data-theme="dark">Dark</a></li>
+                            <li><a href="#" class="theme-option" data-theme="auto">Auto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Mittal Analytics Private Ltd © 2009-2024</p>
+                    <p>Data provided by C-MOTS Internet Technologies Pvt Ltd</p>
+                    <p><a href="terms.html">Terms</a> & <a href="privacy.html">Privacy</a></p>
+                </div>
+                <div class="made-with-love">
+                    <p>Made with <i class="fas fa-heart"></i> in India.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load data -->
+    <script src="data/companies.js"></script>
+    <script src="data/screeningCriteria.js"></script>
+    <script src="data/users.js"></script>
+
+    <!-- Load scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/company.js"></script>
+    <script src="js/screener.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/search.js"></script>
+
+    <!-- Load Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Load noUiSlider for range sliders -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+</body>
+</html>

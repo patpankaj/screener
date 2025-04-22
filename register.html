@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Screener</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.svg" alt="Screener Logo">
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Screens</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Tools</a>
+                            <div class="dropdown-menu">
+                                <a href="screen.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-filter"></i></div>
+                                    <div class="content">
+                                        <h4>Create a stock screen</h4>
+                                        <p>Run queries on 10 years of financial data</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider">
+                                    <div class="premium-label">
+                                        <i class="fas fa-crown"></i> Premium features
+                                    </div>
+                                </div>
+                                <a href="commodities.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                                    <div class="content">
+                                        <h4>Commodity Prices</h4>
+                                        <p>See prices and trends of over 10,000 commodities</p>
+                                    </div>
+                                </a>
+                                <a href="shareholders.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-users"></i></div>
+                                    <div class="content">
+                                        <h4>Search shareholders</h4>
+                                        <p>See companies where a person holds over 1% of the shares</p>
+                                    </div>
+                                </a>
+                                <a href="announcements.html" class="dropdown-item">
+                                    <div class="icon"><i class="fas fa-bullhorn"></i></div>
+                                    <div class="content">
+                                        <h4>Latest Announcements</h4>
+                                        <p>Browse, filter and set alerts for announcements.</p>
+                                    </div>
+                                </a>
+                                <a href="premium.html" class="premium-link">Upgrade to premium</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="auth-header">
+                <img src="img/logo.svg" alt="Screener Logo">
+                <h1>Create an Account</h1>
+                <p>Join thousands of investors using Screener</p>
+            </div>
+            <div class="alert alert-danger" id="register-error" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i> <span id="error-message"></span>
+            </div>
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your full name">
+                    <i class="fas fa-user icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                    <i class="fas fa-envelope icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Choose a username">
+                    <i class="fas fa-user-tag icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Choose a password">
+                    <i class="fas fa-eye-slash icon toggle-password" id="toggle-password"></i>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password">
+                    <i class="fas fa-eye-slash icon toggle-password" id="toggle-confirm-password"></i>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" name="terms" class="form-check-input">
+                        <label for="terms" class="form-check-label">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                </div>
+            </form>
+
+            <div class="social-login">
+                <div class="social-login-title">
+                    <span>Or register with</span>
+                </div>
+                <div class="social-buttons">
+                    <a href="#" class="social-button google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-button facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-button twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="img/logo.svg" alt="Screener Logo">
+                    <p>Stock analysis and screening tool</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="premium.html">Premium</a></li>
+                            <li><a href="changelog.html">What's new?</a></li>
+                            <li><a href="learn.html">Learn</a></li>
+                            <li><a href="#">Install</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Team</h4>
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Theme</h4>
+                        <ul>
+                            <li><a href="#" class="theme-option" data-theme="light">Light</a></li>
+                            <li><a href="#" class="theme-option" data-theme="dark">Dark</a></li>
+                            <li><a href="#" class="theme-option" data-theme="auto">Auto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>Mittal Analytics Private Ltd © 2009-2024</p>
+                    <p>Data provided by C-MOTS Internet Technologies Pvt Ltd</p>
+                    <p><a href="terms.html">Terms</a> & <a href="privacy.html">Privacy</a></p>
+                </div>
+                <div class="made-with-love">
+                    <p>Made with <i class="fas fa-heart"></i> in India.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load data -->
+    <script src="data/companies.js"></script>
+    <script src="data/screeningCriteria.js"></script>
+    <script src="data/users.js"></script>
+
+    <!-- Load scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/company.js"></script>
+    <script src="js/screener.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
